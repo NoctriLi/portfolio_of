@@ -15,7 +15,7 @@
   --bg-color: #000000;
   --second-bg-color: #051427;
   --text-color: #ededed;
-  --main-color:  #8cb1f0;
+  --main-color: #8cb1f0;
 }
 
 /*****#00abf0 End Section 
@@ -104,7 +104,6 @@ section:nth-of-type(even) {
   background: url("../images/bg-flip.jpg") no-repeat center;
 }
 
-
 .home {
   display: flex;
   justify-content: space-between;
@@ -144,8 +143,6 @@ section:nth-of-type(even) {
   -webkit-background-clip: text;
   background-clip: text;
   background-position: -23.3rem 0;
-
-  
 }
 
 .home.show-animate .home-content .text-animate h3 {
@@ -162,7 +159,6 @@ section:nth-of-type(even) {
   height: 100%;
   border-right: 2px solid var(--main-color);
   z-index: -1;
-
 }
 
 .home.show-animate .home-content .text-animate h3::before {
@@ -289,7 +285,7 @@ section:nth-of-type(even) {
 .moon {
   display: flex;
   position: absolute;
-  
+
   bottom: 50;
   margin: auto;
   z-index: 1;
@@ -316,7 +312,7 @@ section:nth-of-type(even) {
   }
 
   80% {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -379,7 +375,7 @@ span {
   border-bottom: 2rem solid var(--main-color);
   border-left: 0.3rem solid var(--main-color);
   border-right: 1.4rem solid var(--main-color);
-  animation: aboutSpinner 4s  linear infinite;
+  animation: aboutSpinner 4s linear infinite;
 }
 
 .about-content {
@@ -409,46 +405,46 @@ span {
   background: var(--bg-color);
 }
 
-.education {
+.card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: auto;
+  min-height: 100vh;
   padding-bottom: 5rem;
   background-size: cover;
 }
 
-.education .education-row {
+.card .card-row {
   background: transparent;
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
 }
 
-.education-row .education-column {
+.card-row .card-column {
   flex: 1 1 40rem;
 }
 
-.education-column .title {
+.card-column .title {
   position: relative;
   display: inline-block;
   font-size: 2.5rem;
   margin: 0 0 1.5rem 2rem;
 }
 
-.education-column .education-box {
+.card-column .card-box {
   position: relative;
   display: inline-block;
   border-left: 0.2rem solid var(--main-color);
 }
 
-.education-box .education-content {
+.card-box .card-content {
   position: relative;
   padding-left: 2rem;
 }
 
-.education-box .education-content::before {
+.card-box .card-content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -459,7 +455,7 @@ span {
   border-radius: 50%;
 }
 
-.education-content .content {
+.card-content .content {
   position: relative;
   border: 0.2rem solid var(--main-color);
   border-radius: 0.6rem;
@@ -468,7 +464,7 @@ span {
   z-index: 1;
 }
 
-.education-content .content::before {
+.card-content .content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -481,69 +477,128 @@ span {
   transition: 0.5s;
 }
 
-.education-content .content:hover::before {
+.card-content .content:hover::before {
   opacity: 10%;
 }
 
-.education-content .content .year {
+.card-content .content .year {
   font-size: 1.5rem;
   color: var(--main-color);
   padding-bottom: 0.5rem;
 }
 
-.education-content .content .year i {
+.card-content .content .year i {
   padding-right: 1.4rem;
 }
 
-.education-content .content h3 {
+.card-content .content h3 {
   font-size: 2rem;
 }
 
-.education-content .content p {
+.card-content .content p {
   font-size: 1.6rem;
   padding-top: 0.5rem;
 }
 
-.skills {
-  padding-bottom: 7rem;
+.tab-container {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
 }
 
-.skills h2 {
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.skills .skills-row {
+.tab-content {
+  position: relative;
+  height: 200px;
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
 }
 
-.skills-row .skills-column {
-  flex: 1 1 40rem;
+.tab-row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
 }
 
-.skills-column .title {
+.tab {
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 5px;
+  z-index: 2;
+  color: var(--main-color);
+}
+
+.tab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0%;
+  width: 100%;
+  height: 100%;
+  background: var(--main-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+.tab:hover::before,
+.tab.active::before {
+  opacity: 100%;
+  color: var(--bg-color);
+}
+.tab:hover,
+.tab.active {
+  color: var(--bg-color);
+}
+
+.project {
+  padding-bottom: 7rem;
+}
+
+.project h2 {
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.project .project-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.project-row .project-column {
+  flex: 1 1 40rem;
+  display: block;
+}
+
+.project-column .title {
   position: relative;
   display: inline-block;
   font-size: 2.5rem;
   margin: 0 0 1.5rem 2rem;
 }
 
-.skills-column .skills-box {
+.project-column .project-box {
   position: relative;
 }
 
-.skills-box .skills-content {
+.project-box .project-content {
+  display: flex;
   position: relative;
-  border: 0.2rem solid var(--main-color);
+  height: 70vh;
+
   border-radius: 0.6rem;
   padding: 0.5rem 1.5rem;
   z-index: 1;
 }
 
-.skills-box .skills-content::before {
+.project-box .project-content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -556,24 +611,57 @@ span {
   transition: 0.5s;
 }
 
-.skills-box .skills-content:hover::before {
+.project-box .project-content:hover::before {
   opacity: 8%;
 }
 
-.skills-content .progress {
+.tab-panel {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  z-index: 1;
+
+
+}
+.tab-panel img {
+  flex: 2 10rem;
+  margin: auto;
+  height: 40%;
+  width: auto;
+  border-radius: 20px;
+
+  transition: 0.5s;
+}
+.tab-panel h1 {
+  flex: 1 1 5rem;
+  font-size: 4rem;
   padding: 1rem 0;
 }
-.skills-content .progress h3 {
+.tab-panel p {
+  flex: 1 1 5rem;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.project-content .progress {
+  padding: 1rem 0;
+}
+.project-content .progress h3 {
   font-size: 1.7rem;
   display: flex;
   justify-content: space-between;
 }
 
-.skills-content .progress h3 span {
+.project-content .progress h3 span {
   color: var(--text-color);
 }
 
-.skills-content .progress .bar {
+.project-content .progress .bar {
   height: 2.5rem;
   border-radius: 0.6rem;
   border: 0.2rem solid var(--main-color);
@@ -581,35 +669,35 @@ span {
   margin: 1rem 0;
 }
 
-.skills-content .progress .bar span {
+.project-content .progress .bar span {
   display: block;
   height: 100%;
   border-radius: 0.3rem;
   background: var(--main-color);
 }
 
-.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+.project-column:nth-child(1) .project-content .progress:nth-child(1) .bar span {
   width: 80%;
 }
-.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+.project-column:nth-child(1) .project-content .progress:nth-child(2) .bar span {
   width: 70%;
 }
-.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+.project-column:nth-child(1) .project-content .progress:nth-child(3) .bar span {
   width: 60%;
 }
-.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
+.project-column:nth-child(1) .project-content .progress:nth-child(4) .bar span {
   width: 50%;
 }
-.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
+.project-column:nth-child(2) .project-content .progress:nth-child(1) .bar span {
   width: 18%;
 }
-.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
+.project-column:nth-child(2) .project-content .progress:nth-child(2) .bar span {
   width: 32%;
 }
-.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
+.project-column:nth-child(2) .project-content .progress:nth-child(3) .bar span {
   width: 26%;
 }
-.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
+.project-column:nth-child(2) .project-content .progress:nth-child(4) .bar span {
   width: 24%;
 }
 
@@ -767,7 +855,6 @@ span {
   opacity: 60%;
   background: var(--bg-color);
   z-index: 98;
-
 }
 
 .animate.moon {
@@ -783,31 +870,27 @@ span {
 #menu-icon .animate,
 .home.show-animate .animate {
   animation: showRight 1.5s ease forwards;
-  animation-delay: calc(.1s * var(--i));
+  animation-delay: calc(0.1s * var(--i));
 }
 
 .animate.scroll {
   transition: 1s ease;
-  transition-delay: calc(.1s / var(--i));
+  transition-delay: calc(0.1s / var(--i));
   animation: none;
 }
 
-.education .education-box .animate.scroll {
+.card .card-box .animate.scroll {
   width: 105%;
-
 }
 
-
 .about.show-animate .animate.scroll,
-.education.show-animate .animate.scroll,
-.skills.show-animate .animate.scroll,
+.card.show-animate .animate.scroll,
+.project.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll {
   width: 0;
-  transition-delay: calc(.1s * var(--i));
+  transition-delay: calc(0.1s * var(--i));
 }
-
-
 
 /* Media Queries */
 /* 1200px = 75em, 992px = 62em, 768px = 48em, 576px = 36em */
@@ -836,8 +919,6 @@ span {
   .footer {
     padding: 2rem 4%;
   }
-
-
 }
 
 @media (max-width: 768px) {
@@ -885,7 +966,6 @@ span {
     border-left: 4px solid var(--main-color);
     opacity: 1;
   }
-
 }
 
 @media (max-width: 520px) {
@@ -929,7 +1009,7 @@ span {
     font-size: 5.2rem;
   }
 
-  .education {
+  .card {
     padding: 10rem 4% 5rem;
   }
 
@@ -974,83 +1054,108 @@ span {
   100% {
     background-position: -23.3rem 0;
   }
-  25%, 40%{
+  25%,
+  40% {
     background-position: 0rem 0;
   }
-  45%, 95% {
+  45%,
+  95% {
     background-position: -10rem 0;
   }
-  
 }
 @keyframes homeCursorText {
-  0%, 10%, 100% {
+  0%,
+  10%,
+  100% {
     width: 0;
     opacity: 0;
   }
-  25%, 30%, 35%, 40% {
+  25%,
+  30%,
+  35%,
+  40% {
     width: 100%;
     opacity: 1;
   }
-  45%, 45%, 50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 95% {
+  45%,
+  45%,
+  50%,
+  55%,
+  60%,
+  65%,
+  70%,
+  75%,
+  80%,
+  85%,
+  90%,
+  95% {
     width: 57%;
     opacity: 1;
   }
 
- 31%, 36%, 46%, 51%, 56%, 61%, 66%, 71%, 76%, 81%, 86%, 91% {
+  31%,
+  36%,
+  46%,
+  51%,
+  56%,
+  61%,
+  66%,
+  71%,
+  76%,
+  81%,
+  86%,
+  91% {
     opacity: 0;
   }
 }
 
 @keyframes aboutSpinner {
-  
-  
   100% {
-    transform: translate(-50%, -50%) rotate(720deg)
+    transform: translate(-50%, -50%) rotate(720deg);
   }
-  
+
   88% {
     border-bottom: 3rem solid var(--main-color);
     border-left: 1rem solid var(--main-color);
-    border-right: .5rem solid var(--main-color); 
-    border-top: .8rem solid var(--main-color);
+    border-right: 0.5rem solid var(--main-color);
+    border-top: 0.8rem solid var(--main-color);
   }
   72% {
     border-bottom: 0.2rem solid var(--main-color);
     border-left: 1rem solid var(--main-color);
-    border-right: .3rem solid var(--main-color); 
+    border-right: 0.3rem solid var(--main-color);
     border-top: 2.8rem solid var(--main-color);
   }
   60% {
     border-bottom: 0.5rem solid var(--main-color);
     border-left: 0.1rem solid var(--main-color);
-    border-right: 2.6rem solid var(--main-color); 
+    border-right: 2.6rem solid var(--main-color);
     border-top: 1rem solid var(--main-color);
   }
   48% {
     border-bottom: 2.4rem solid var(--main-color);
     border-left: 0.1rem solid var(--main-color);
-    border-right: 1rem solid var(--main-color); 
-    border-top: .1rem solid var(--main-color);
+    border-right: 1rem solid var(--main-color);
+    border-top: 0.1rem solid var(--main-color);
   }
   36% {
     border-bottom: 2.3rem solid var(--main-color);
     border-left: 1.3rem solid var(--main-color);
-    border-right: .1rem solid var(--main-color); 
-    border-top: .1rem solid var(--main-color);
+    border-right: 0.1rem solid var(--main-color);
+    border-top: 0.1rem solid var(--main-color);
   }
   24% {
     border-bottom: 0.1rem solid var(--main-color);
     border-left: 1.2rem solid var(--main-color);
-    border-right: .1rem solid var(--main-color); 
+    border-right: 0.1rem solid var(--main-color);
     border-top: 2.2rem solid var(--main-color);
   }
   12% {
     border-bottom: 0.5rem solid var(--main-color);
     border-left: 0.4rem solid var(--main-color);
-    border-right: 2.1rem solid var(--main-color); 
+    border-right: 2.1rem solid var(--main-color);
     border-top: 1.1rem solid var(--main-color);
   }
-  
 }
 
 @keyframes showRight {

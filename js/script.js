@@ -44,3 +44,25 @@ window.onscroll = () => {
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY + 1 >= document.scrollingElement.scrollHeight)
 };
+
+
+
+const tabs = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.tab-panel');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const tabId = tab.getAttribute('data-tab');
+  
+    const panel = document.querySelector(`.tab-panel[data-tab="${tabId}"]`);
+    panels.forEach(panel => {
+      panel.style.display = 'none';
+    });
+    tabs.forEach(tab => {
+    tab.classList.remove('active');
+    });
+    panel.style.display = 'flex';
+    tab.classList.add('active');
+  });
+});
+document.querySelector(`.tab-panel[data-tab="${'tab1'}"]`).style.display = 'flex';
