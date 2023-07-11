@@ -66,3 +66,9 @@ tabs.forEach(tab => {
   });
 });
 document.querySelector(`.tab-panel[data-tab="${'tab1'}"]`).style.display = 'flex';
+document.querySelector(`.tab[data-tab="${'tab1'}"]`).classList.add('active');
+
+
+    const slide = document.getElementById(slideId);
+    const slideTop = slide.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: slideTop, behavior: 'smooth' });
