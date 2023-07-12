@@ -65,10 +65,36 @@ tabs.forEach(tab => {
     tab.classList.add('active');
   });
 });
+
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var imgs = document.querySelectorAll('.slide');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+
+imgs.forEach(img => {
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.alt;
+}
+});
+
+modal.onclick = function() {
+    img01.className += " out";
+    setTimeout(function() {
+       modal.style.display = "none";
+       img01.className = "modal-content";
+     }, 400);
+    
+ }    
+  
+
 document.querySelector(`.tab-panel[data-tab="${'tab1'}"]`).style.display = 'flex';
+
 document.querySelector(`.tab[data-tab="${'tab1'}"]`).classList.add('active');
 
 
-    const slide = document.getElementById(slideId);
-    const slideTop = slide.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({ top: slideTop, behavior: 'smooth' });
