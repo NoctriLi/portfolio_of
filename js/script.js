@@ -1,4 +1,6 @@
 
+//////////
+///active menus
 
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -11,7 +13,8 @@ menuIcon.onclick = () => {
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header .navbar a');
 
-
+///////
+//scroll
 window.onscroll = () => {
 
     sections.forEach(sec => {
@@ -44,8 +47,8 @@ window.onscroll = () => {
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY + 1 >= document.scrollingElement.scrollHeight)
 };
-
-
+///////
+//tabs
 
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.tab-panel');
@@ -83,6 +86,12 @@ img.onclick = function(){
 }
 });
 
+
+ const modalButton = document.getElementById('modal-btn');
+ const aboutModal = document.getElementById('about-modal');
+
+
+  
 modal.onclick = function() {
     img01.className += " out";
     setTimeout(function() {
@@ -90,11 +99,43 @@ modal.onclick = function() {
        img01.className = "modal-content";
      }, 400);
     
- }    
-  
+ }
+aboutModal.onclick = function() {
+    modalText.className += " out";
+    setTimeout(function() {
+       aboutModal.style.display = "none";
+       modalText.className = "modal-content";
+     }, 400);
+    
+ }
+
+
 
 document.querySelector(`.tab-panel[data-tab="${'tab1'}"]`).style.display = 'flex';
 
 document.querySelector(`.tab[data-tab="${'tab1'}"]`).classList.add('active');
 
 
+////////////
+//submit form
+
+const btn = document.getElementById('email-button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_sn0brr7';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Sent!';
+      btn.disabled = true;
+    }, (err) => {
+      btn.value = 'Error';
+      btn.disabled = true;
+    });
+});
