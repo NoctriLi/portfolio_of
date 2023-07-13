@@ -100,6 +100,11 @@ modal.onclick = function() {
      }, 400);
     
  }
+
+modalButton.onclick = function() {
+    aboutModal.style.display = "block";
+    }
+
 aboutModal.onclick = function() {
     modalText.className += " out";
     setTimeout(function() {
