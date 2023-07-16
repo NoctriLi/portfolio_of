@@ -19,19 +19,6 @@
   --main-darker: #5283d6;
 }
 
-/*****#00abf0 End Section 
---bg-color: #000000;
-  --second-bg-color: #112e42;
-  --text-color: #ededed;
-  --main-color: #e3e31a;
-
-
-    --bg-color: #000000;
-  --second-bg-color: #051427;
-  --text-color: #ededed;
-  --main-color: #f8bc04;
-*****/
-
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -98,8 +85,8 @@ section {
   width: 100vw;
   padding: 10rem 9% 2rem;
   background-size: cover;
-  background: var(--bg-color); 
-  border-bottom: 3px solid var(--main-color); 
+  background: var(--bg-color);
+  border-bottom: 3px solid var(--main-color);
 }
 
 /* section:nth-of-type(odd) {
@@ -237,7 +224,7 @@ section:nth-of-type(even) {
   position: relative;
   display: flex;
   margin-top: 1rem;
-  width: 130px; 
+  width: 130px;
   display: flex;
   justify-content: space-between;
 }
@@ -367,8 +354,8 @@ span {
 
 .about-img img {
   position: relative;
-  top: 4rem; 
-  height:  40rem;
+  top: 4rem;
+  height: 40rem;
   width: 30rem;
   border-radius: 50%;
   border: 0rem solid var(--main-color);
@@ -442,7 +429,6 @@ span {
   flex-direction: column;
   flex: 1 1 40rem;
   max-width: 80rem;
-  
 }
 
 .card-column .title {
@@ -457,7 +443,7 @@ span {
   display: inline-block;
   max-width: 1000px;
   border-left: 0.1rem solid var(--main-color);
-  border-bottom: 0.1rem solid var(--main-color); 
+  border-bottom: 0.1rem solid var(--main-color);
 }
 
 .md-lg-txt {
@@ -524,13 +510,13 @@ span {
   padding-bottom: 0.5rem;
 }
 .card-content span {
-  font-size: 1.8rem; 
-  color: var(--main-darker); 
+  font-size: 1.8rem;
+  color: var(--main-darker);
   padding-bottom: 0.5rem;
 }
 
 .card-content .content p {
-  font-size:  1.5rem;
+  font-size: 1.5rem;
 
   padding-top: 0.5rem;
   line-height: 1.3;
@@ -541,7 +527,7 @@ span {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .tab-content {
@@ -633,7 +619,7 @@ span {
 .project-content {
   display: flex;
   flex-direction: row;
-  
+
   height: 50vh;
 
   border-radius: 0.6rem;
@@ -666,7 +652,7 @@ span {
 .tab-panel {
   display: none;
   flex-direction: column;
-  justify-content: space-evenly; 
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   padding: 5rem;
@@ -684,11 +670,10 @@ span {
   font-size: 3rem;
 }
 
-
 .titleBox {
   flex: 0 1 10rem;
   padding: 0;
-  margin: auto; 
+  margin: auto;
   width: auto;
   text-align: center;
   height: 30%;
@@ -701,7 +686,6 @@ span {
   text-align: center;
 }
 .column {
-  
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -710,7 +694,7 @@ span {
 
 .spread {
   justify-content: space-between;
-} 
+}
 
 .carousel {
   display: flex;
@@ -718,15 +702,14 @@ span {
 
   height: auto;
   position: relative;
-  object-fit: cover; 
+  object-fit: cover;
 }
- 
+
 .left-panel {
   width: 500px;
   height: 500px;
   align-items: center;
 }
-
 
 .row-start {
   justify-content: start;
@@ -736,14 +719,10 @@ span {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain; 
+  object-fit: contain;
   object-position: center;
-  align-self: center; 
+  align-self: center;
 }
-
-
-
-
 
 .slider {
   display: flex;
@@ -752,8 +731,8 @@ span {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   margin-top: 2rem;
-  border-radius: .5rem;
-  -ms-overflow-style: none; 
+  border-radius: 0.5rem;
+  -ms-overflow-style: none;
   scrollbar-width: none;
 }
 .slider::-webkit-scrollbar {
@@ -762,11 +741,11 @@ span {
   box-shadow: inset 0 0 5px var(--main-color);
 }
 .slider::-webkit-scrollbar-track {
-	 background: var(--main-color);
+  background: var(--main-color);
 }
 .slider::-webkit-scrollbar-thumb {
-	 background: var(--main-darker);
-   border-radius: 10px;
+  background: var(--main-darker);
+  border-radius: 10px;
 }
 
 .slider img {
@@ -781,8 +760,7 @@ span {
 }
 
 .slider img:hover {
-
-  cursor:zoom-in
+  cursor: zoom-in;
 }
 .modal {
   display: none; /* Hidden by default */
@@ -794,13 +772,13 @@ span {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
 .modal-content {
   margin: auto;
-  display: block; 
+  display: block;
   max-height: 80vh;
   width: auto;
 }
@@ -815,31 +793,48 @@ span {
   height: 150px;
 }
 .bot-text {
-  display: inline-block; 
+  display: inline-block;
   font-size: 1.5rem;
   padding: 1rem 0;
   margin: auto;
   text-align: left;
 }
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(1)}
-  to {-webkit-transform:scale(2)}
+  from {
+    -webkit-transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(2);
+  }
 }
 
 @keyframes zoom {
-  from {transform:scale(0.4)}
-  to {transform:scale(1)}
+  from {
+    transform: scale(0.4);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 @-webkit-keyframes zoom-out {
-  from {transform:scale(1)}
-  to {transform:scale(0)}
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
 }
 @keyframes zoom-out {
-  from {transform:scale(1)}
-  to {transform:scale(0)}
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
 }
 
-.modal-content, #caption {
+.modal-content,
+#caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -849,9 +844,9 @@ span {
   animation-name: zoom-out;
   animation-duration: 0.6s;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .modal-content {
-      width: 100%;
+    width: 100%;
   }
 }
 
@@ -1036,7 +1031,7 @@ span {
 .navbar .animate,
 #menu-icon .animate,
 .home.show-animate .animate {
-  animation: showRight .5s ease forwards;
+  animation: showRight 0.5s ease forwards;
   animation-delay: calc(0.05s * var(--i));
 }
 
@@ -1055,7 +1050,7 @@ span {
 .project.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll {
-  animation: showRight .5s ease forwards;
+  animation: showRight 0.5s ease forwards;
   transition-delay: calc(0.05s * var(--i));
 }
 
@@ -1149,7 +1144,7 @@ span {
     height: 25%;
     opacity: 50%;
   }
-  
+
   .left-panel {
     width: 100%;
     height: auto;
@@ -1181,7 +1176,7 @@ span {
   .home-content h1 {
     font-size: 5.2rem;
   }
-  
+
   .card {
     padding: 10rem 4% 5rem;
   }
@@ -1334,7 +1329,7 @@ span {
   12% {
     border-bottom: 0.5rem solid var(--main-color);
     border-left: 0.4rem solid var(--main-color);
-    border-right: 2.1rem solid var(--main-darker); 
+    border-right: 2.1rem solid var(--main-darker);
     border-top: 1.1rem solid var(--main-darker);
   }
 }
@@ -1345,10 +1340,8 @@ span {
   }
   50% {
     width: 100%;
-    
   }
   100% {
     width: 0;
-    
   }
 }
