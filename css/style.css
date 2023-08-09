@@ -29,6 +29,15 @@ body {
   color: var(--text-color);
 }
 
+li {
+  line-height: 2rem;
+}
+.text-md {
+  font-size: 1.8rem!important;
+  font-weight: bolder;
+}
+
+
 .header {
   position: fixed;
   top: 0;
