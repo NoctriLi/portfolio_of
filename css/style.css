@@ -36,6 +36,9 @@ li {
   font-size: 1.8rem!important;
   font-weight: bolder;
 }
+.mt-3 {
+  margin-top: 3rem!important;
+}
 
 
 .header {
@@ -170,7 +173,7 @@ section:nth-of-type(even) {
 .home-content p {
   position: relative;
   font-size: 1.8rem;
-  margin: 2rem 0 4rem;
+  margin: .5rem 0 1rem; 
   line-height: 1.6;
 }
 
