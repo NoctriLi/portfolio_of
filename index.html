@@ -236,15 +236,19 @@
         <div class="row">
           <div class="tab-container">
             <div class="tab-box">
-              <a href="#projects" class="tab" data-tab="tab1">Discord Bot</a>
+              <a href="#projects" class="tab" data-tab="tab1">Movie Critical</a>
               <span class="animate scroll" style="--i: 5"></span>
             </div>
             <div class="tab-box">
-              <a href="#projects" class="tab" data-tab="tab2">Log Analyzer</a>
+              <a href="#projects" class="tab" data-tab="tab2">Discord Bot</a>
               <span class="animate scroll" style="--i: 5"></span>
             </div>
             <div class="tab-box">
-              <a href="#projects" class="tab" data-tab="tab3">Pokedex</a>
+              <a href="#projects" class="tab" data-tab="tab3">Log Analyzer</a>
+              <span class="animate scroll" style="--i: 5"></span>
+            </div>
+            <div class="tab-box">
+              <a href="#projects" class="tab" data-tab="tab4">Pokedex</a>
               <span class="animate scroll" style="--i: 5"></span>
             </div>
           </div>
@@ -253,6 +257,83 @@
         <div class="row">
           <div class="project-box">
             <div class="tab-panel tab-active" data-tab="tab1" id="project1">
+              <div class="row row-start">
+                <div class="left-panel column">
+                  <div class="carousel">
+                    <div class="slider">
+                      <img
+                        id="slide-1"
+                        src="images/movie_crit_home.png"
+                        class="slide"
+                        alt="Store Front"
+                      />
+                      <img
+                        id="slide-2"
+                        src="images/movie_crit_movie.png"
+                        class="slide"
+                        alt="Menu"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <h3 class="tab-sm-header">
+                    "Movie Critical" (Work in Progress)
+                    <span class="animate scroll" style="--i: 5"></span>
+                  </h3>
+                  <div class="bot-text">
+                    <p class="text-md">
+                      
+                      A movie database meant to allow users to search for movies, tv series, and actors. It also allows users to create an account and save their favorite movies, tv series, and actors.
+                    </p>
+                    <p class="text-md">
+                      The site integrates with the TMDB API to get movie data and utilized dynamic routing to create pages for each movie, tv series, and actor.
+                    </p>
+                    <ul>
+                      <li>Accounts/authentication</li>
+                      <li>/watchlist(WIP) </li>
+                      <li>Search for shows/movies(WIP)</li>
+                      <li>Dynamic routing to generate pages</li>
+                      <li>Written in Typescript for type safety</li>
+                    </ul>
+                    <p class="text-md">Tech stack:</p>
+                    <ul>
+                      <li>Node.js</li>
+                      <li>Typescript</li>
+                      <li>Tailwind</li>
+                      <li>React</li>
+                      <li>Next</li>
+                    </ul>
+                    <span class="animate scroll" style="--i: 3"></span>
+                  </div>
+                  <p class="text-md">Try it out!</p>
+                  <div>
+                    <div class="btn-box btns">
+                      <a
+                        href="https://github.com/NoctriLi/movie-critical"
+                        target="_blank"
+                        class="btn"
+                        >Source Code</a
+                      >
+                      <span class="animate scroll" style="--i: 5"></span>
+
+                  </div>
+                    <div class="btn-box btns">
+                      <a
+                        href="https://movie-critical.vercel.app/"
+                        target="_blank"
+                        class="btn"
+                        >Demo</a
+                      >
+                      <span class="animate scroll" style="--i: 5"></span>
+                    </div>
+                    
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-panel tab-active" data-tab="tab2" id="project2">
               <div class="row row-start">
                 <div class="left-panel column">
                   <div class="carousel">
@@ -299,12 +380,12 @@
                     <span class="animate scroll" style="--i: 5"></span>
                   </h3>
                   <div class="bot-text">
-                    <p>
+                    <p  class="text-md">
                       A shop system bot for Discord designed to facilitate the
                       selling and buying of virtual items among community
                       members.
                     </p>
-                    <p>
+                    <p  class="text-md">
                       It incorporates a clever menu system to allow shop
                       administration to manage data features, such as:
                     </p>
@@ -314,11 +395,11 @@
                       <li>Changing channel the shop is in</li>
                       <li>Connecting a google sheet for logging</li>
                     </ul>
-                    <p>
+                    <p  class="text-md">
                       The bot is written in javascript and utilizes a mysql
                       server to manage each server's settings and receipts.
                     </p>
-                    <p>Tech stack:</p>
+                    <p  class="text-md">Tech stack:</p>
                     <ul>
                       <li>Node.js</li>
                       <li>Discord.js</li>
@@ -327,7 +408,7 @@
                     </ul>
                     <span class="animate scroll" style="--i: 3"></span>
                   </div>
-                  <p class="tryText">Try it out!</p>
+                  <p  class="text-md">Try it out!</p>
                   <div class="btn-box btns">
                     <a
                       href="https://discord.com/api/oauth2/authorize?client_id=1095847115432931379&permissions=8&scope=applications.commands%20bot"
@@ -340,7 +421,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-panel tab-active" data-tab="tab2" id="project2">
+            <div class="tab-panel tab-active" data-tab="tab3" id="project3">
               <div class="row row-start">
                 <div class="column">
                   <div class="carousel">
@@ -361,22 +442,22 @@
                     ></span>
                   </h3>
                   <div class="bot-text">
-                    <p>
+                    <p  class="text-md">
                       (Deprecated due to new game content and API database
                       changes.)
                     </p>
-                    <p>
+                    <p  class="text-md">
                       A tool to help guilds recruit players for World of
                       Warcraft. It uses the Warcraft Logs API to pull data from
                       player logs and displays it in a way that is easy to read
                       and understand.
                     </p>
-                    <p>
+                    <p  class="text-md">
                       It searches for information based on the players
                       performance, scrapes their public profiles for contact
                       information, and displays it in a table.
                     </p>
-                    <p>Tech stack:</p>
+                    <p  class="text-md">Tech stack:</p>
                     <ul>
                       <li>Node.js</li>
                       <li>Next.js</li>
@@ -397,7 +478,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-panel tab-active" data-tab="tab3" id="project3">
+            <div class="tab-panel tab-active" data-tab="tab4" id="project4">
               <div class="row row-start">
                 <div class="column">
                   <div class="carousel">
@@ -413,12 +494,12 @@
                 <div class="column">
                   <h3 class="tab-sm-header">Pokedex</h3>
                   <div class="bot-text">
-                    <p>
+                    <p  class="text-md">
                       A simple pokedex that uses the PokeAPI to pull data from
                       the Pokemon database and display it on a 'pokedex'shaped
                       like a modern phone.
                     </p>
-                    <p>Tech stack:</p>
+                    <p  class="text-md">Tech stack:</p>
                     <ul>
                       <li>Node.js</li>
                       <li>React</li>
@@ -426,6 +507,7 @@
                     </ul>
                     <span class="animate scroll" style="--i: 5"></span>
                   </div>
+                  <p class="text-md">Try it out!</p>
                   <div>
                     <div class="btn-box btns">
                       <a
